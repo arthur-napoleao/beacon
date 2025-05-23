@@ -179,7 +179,7 @@ export function DefenderDeepDive() {
       {/* Fixed CTA at bottom */}
       <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t">
         <Button 
-          onClick={() => navigate('/action-canvas')}
+          onClick={() => navigate('/chat')}
           className="w-full bg-black text-white rounded-full py-4 text-[17px] font-medium"
         >
           Ask Ana about Life as a Defender

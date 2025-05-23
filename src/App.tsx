@@ -17,6 +17,7 @@ import { ActionCanvas } from './screens/ActionCanvas';
 import { MilestoneRail } from './screens/MilestoneRail';
 import { HomeCockpit } from './screens/HomeCockpit';
 import { DefenderDeepDive } from './screens/DefenderDeepDive';
+import { FutureChat } from './screens/FutureChat';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -40,6 +41,7 @@ function AnimatedRoutes() {
         <Route path="/milestones" element={<MilestoneRail />} />
         <Route path="/home" element={<HomeCockpit />} />
         <Route path="/defender" element={<DefenderDeepDive />} />
+        <Route path="/chat" element={<FutureChat />} />
       </Routes>
     </AnimatePresence>
   );
