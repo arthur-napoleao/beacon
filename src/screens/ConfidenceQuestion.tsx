@@ -23,40 +23,40 @@ export function ConfidenceQuestion() {
         <div className="flex flex-col gap-4 w-full">
           <Button 
             variant="outline"
-            className="py-6 text-lg rounded-2xl bg-black text-white hover:bg-black/90"
+            className="w-full py-6 text-lg rounded-2xl bg-black text-white hover:bg-black/90"
             onClick={() => navigate('/loading')}
           >
-            <div className="text-left">
+            <div className="w-full text-left">
               <div className="font-medium">I'm very confident.</div>
               <div className="text-sm opacity-80">I know what steps to take to move forward.</div>
             </div>
           </Button>
           <Button 
             variant="outline"
-            className="py-6 text-lg rounded-2xl bg-black/5 hover:bg-black/10"
+            className="w-full py-6 text-lg rounded-2xl bg-black/5 hover:bg-black/10"
             onClick={() => navigate('/loading')}
           >
-            <div className="text-left">
+            <div className="w-full text-left">
               <div className="font-medium">I'm somewhat confident.</div>
               <div className="text-sm opacity-80">I have a general idea, but need more guidance.</div>
             </div>
           </Button>
           <Button 
             variant="outline"
-            className="py-6 text-lg rounded-2xl bg-black/5 hover:bg-black/10"
+            className="w-full py-6 text-lg rounded-2xl bg-black/5 hover:bg-black/10"
             onClick={() => navigate('/loading')}
           >
-            <div className="text-left">
+            <div className="w-full text-left">
               <div className="font-medium">I'm unsure...</div>
               <div className="text-sm opacity-80">I'm interested, but unsure what steps to take.</div>
             </div>
           </Button>
           <Button 
             variant="outline"
-            className="py-6 text-lg rounded-2xl bg-black/5 hover:bg-black/10"
+            className="w-full py-6 text-lg rounded-2xl bg-black/5 hover:bg-black/10"
             onClick={() => navigate('/loading')}
           >
-            <div className="text-left">
+            <div className="w-full text-left">
               <div className="font-medium">I'm not confident at all.</div>
               <div className="text-sm opacity-80">I don't know how to start preparing.</div>
             </div>
