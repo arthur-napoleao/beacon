@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 
 export function SplashScreen() {
@@ -9,25 +8,26 @@ export function SplashScreen() {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate('/hero-1');
-    }, 3000);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, [navigate]);
 
   return (
     <motion.div 
-      className="flex flex-col items-center justify-center h-full p-6"
+      className="flex flex-col items-center justify-center h-full p-6 bg-white"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
     >
-      <h1 className="text-4xl font-bold mb-8 text-primary">Welcome</h1>
-      <Button 
-        onClick={() => navigate('/hero-1')}
-        className="w-full max-w-[280px] py-4"
+      <motion.div
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.5 }}
       >
-        Get Started
-      </Button>
+        <h1 className="text-6xl font-bold mb-8 text-primary">Beacon</h1>
+      </motion.div>
     </motion.div>
   );
 }
