@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { AnimatePresence } from 'framer-motion';
 import { SplashScreen } from './screens/SplashScreen';
 import { ScreenThree as EmailInput } from './screens/ScreenThree/ScreenThree';
+import { VerificationCode } from './screens/VerificationCode';
 import { NameInput } from './screens/NameInput';
 import { SchoolInput } from './screens/SchoolInput';
 import { InterestQuestion } from './screens/InterestQuestion';
@@ -22,6 +23,7 @@ function AnimatedRoutes() {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<SplashScreen />} />
         <Route path="/email" element={<EmailInput />} />
+        <Route path="/verify" element={<VerificationCode />} />
         <Route path="/name" element={<NameInput />} />
         <Route path="/school" element={<SchoolInput />} />
         <Route path="/interests" element={<InterestQuestion />} />
@@ -47,4 +49,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

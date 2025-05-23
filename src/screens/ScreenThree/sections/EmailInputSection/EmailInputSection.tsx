@@ -15,7 +15,7 @@ export const EmailInputSection = (): JSX.Element => {
           variant="ghost" 
           size="icon" 
           className="p-0"
-          onClick={() => navigate('/hero-2')}
+          onClick={() => navigate('/')}
         >
           <ChevronLeftIcon className="w-6 h-6" />
           <span className="sr-only">Back</span>
@@ -45,7 +45,7 @@ export const EmailInputSection = (): JSX.Element => {
       </div>
 
       <Button 
-        onClick={() => navigate('/name')}
+        onClick={() => navigate('/verify')}
         className="w-full max-w-[480px] min-w-[180px] py-3.5 px-6 bg-[#141414] rounded-[27px] shadow-shallow-below [font-family:'PP_Neue_Montreal-Medium',Helvetica] font-medium text-white text-lg tracking-[0.18px] leading-5"
       >
         Continue
