@@ -30,6 +30,11 @@ export function InterestQuestion() {
           <textarea 
             className="w-full min-h-[160px] text-lg bg-black/5 border-0 rounded-2xl p-4 resize-none"
             placeholder="I want to...."
+            defaultValue="I've been really into psychology lately. I watch a bunch of videos about how people think and what affects their behavior.
+
+Law seems interesting too. I'm not sure if I'd actually go to law school, but I like the idea of standing up for people and arguing cases.
+
+I'm also into design. Not really fashion, but more like graphics, posters, or album art. I like making things that look good and say something at the same time."
           />
           <Button
             variant="ghost"
