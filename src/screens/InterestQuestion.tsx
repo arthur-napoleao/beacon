@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Navigation } from '@/components/ui/navigation';
 import { motion } from 'framer-motion';
+import { Input } from '@/components/ui/input';
 
 export function InterestQuestion() {
   const navigate = useNavigate();
@@ -17,44 +18,24 @@ export function InterestQuestion() {
       <Navigation />
 
       <div className="flex flex-col items-center gap-8 w-full mt-12">
-        <h1 className="text-[32px] font-normal text-center">What interests you most?</h1>
-        <div className="grid grid-cols-2 gap-4 w-full">
-          <Button 
-            variant="outline"
-            className="h-24 text-lg rounded-2xl"
-            onClick={() => navigate('/confidence')}
-          >
-            Technology
-          </Button>
-          <Button 
-            variant="outline"
-            className="h-24 text-lg rounded-2xl"
-            onClick={() => navigate('/confidence')}
-          >
-            Business
-          </Button>
-          <Button 
-            variant="outline"
-            className="h-24 text-lg rounded-2xl"
-            onClick={() => navigate('/confidence')}
-          >
-            Healthcare
-          </Button>
-          <Button 
-            variant="outline"
-            className="h-24 text-lg rounded-2xl"
-            onClick={() => navigate('/confidence')}
-          >
-            Arts
-          </Button>
+        <div className="space-y-4 text-center">
+          <h1 className="text-[32px] font-['PP_Editorial_New'] text-center">What fields are you curious about?</h1>
+          <p className="text-[17px] text-black/60">
+            Do you have a dream career or are you still figuring it out?
+          </p>
         </div>
+        
+        <Input 
+          className="text-lg bg-black/5 border-0 h-14 rounded-2xl"
+          placeholder="I want to...."
+        />
       </div>
 
       <Button 
         onClick={() => navigate('/confidence')}
-        className="w-full bg-black/10 text-black rounded-full py-4 text-[17px] font-medium"
+        className="w-full bg-black text-white rounded-full py-4 text-[17px] font-medium"
       >
-        Skip this question
+        Continue
       </Button>
     </motion.div>
   );
