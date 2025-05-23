@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Navigation } from '@/components/ui/navigation';
 import { motion } from 'framer-motion';
 import { Input } from '@/components/ui/input';
+import { Mic } from 'lucide-react';
 
 export function InterestQuestion() {
   const navigate = useNavigate();
@@ -25,10 +26,19 @@ export function InterestQuestion() {
           </p>
         </div>
         
-        <Input 
-          className="text-lg bg-black/5 border-0 h-14 rounded-2xl"
-          placeholder="I want to...."
-        />
+        <div className="relative w-full">
+          <textarea 
+            className="w-full min-h-[160px] text-lg bg-black/5 border-0 rounded-2xl p-4 resize-none"
+            placeholder="I want to...."
+          />
+          <Button
+            variant="ghost"
+            size="icon"
+            className="absolute bottom-4 right-4 text-black/60 hover:text-black"
+          >
+            <Mic className="w-6 h-6" />
+          </Button>
+        </div>
       </div>
 
       <Button 
