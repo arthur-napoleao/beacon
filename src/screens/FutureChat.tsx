@@ -5,7 +5,9 @@ import { Navigation } from '@/components/ui/navigation';
 import { motion } from 'framer-motion';
 import { Send } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { FreeMode } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/free-mode';
 
 interface ChatMessage {
   type: 'system' | 'user';
@@ -33,7 +35,7 @@ export function FutureChat() {
   const [messages, setMessages] = useState<ChatMessage[]>([
     { type: 'system', content: "Hi Ana! I'm you in 2033, working as a Public Defender. Ask me anything about the job!" }
   ]);
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("What's a typical day like?");
   const chatEndRef = useRef<HTMLDivElement>(null);
 
   const quickPrompts = [
@@ -77,7 +79,6 @@ export function FutureChat() {
 
   const handlePromptClick = (text: string) => {
     setInputValue(text);
-    handleSend();
   };
 
   return (
@@ -115,14 +116,16 @@ export function FutureChat() {
 
       <div className="absolute bottom-0 left-0 right-0 bg-white border-t p-4">
         <div className="max-w-screen-sm mx-auto">
-          <div className="mb-4">
+          <div className="mb-4 overflow-hidden">
             <Swiper
+              modules={[FreeMode]}
               slidesPerView="auto"
               spaceBetween={8}
+              freeMode={true}
               className="w-full"
             >
               {quickPrompts.map((prompt, index) => (
-                <SwiperSlide key={index} style={{ width: 'auto' }}>
+                <SwiperSlide key={index} className="w-auto">
                   <QuickPrompt
                     text={prompt}
                     onClick={handlePromptClick}
