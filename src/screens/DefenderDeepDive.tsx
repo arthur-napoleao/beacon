@@ -182,7 +182,7 @@ export function DefenderDeepDive() {
           onClick={() => navigate('/action-canvas')}
           className="w-full bg-black text-white rounded-full py-4 text-[17px] font-medium"
         >
-          Chat with Public Defender Ana
+          Ask Ana about Life as a Defender
         </Button>
       </div>
     </motion.div>
