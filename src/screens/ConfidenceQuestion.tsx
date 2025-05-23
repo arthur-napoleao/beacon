@@ -17,44 +17,58 @@ export function ConfidenceQuestion() {
       <Navigation />
 
       <div className="flex flex-col items-center gap-8 w-full mt-12">
-        <h1 className="text-[32px] font-normal text-center">How confident are you about your career path?</h1>
+        <h1 className="text-[32px] font-['PP_Editorial_New'] text-center">
+          How confident are you in taking steps to explore or prepare for this career path?
+        </h1>
         <div className="flex flex-col gap-4 w-full">
           <Button 
             variant="outline"
-            className="py-6 text-lg rounded-2xl"
+            className="py-6 text-lg rounded-2xl bg-black text-white hover:bg-black/90"
             onClick={() => navigate('/loading')}
           >
-            Very confident
+            <div className="text-left">
+              <div className="font-medium">I'm very confident.</div>
+              <div className="text-sm opacity-80">I know what steps to take to move forward.</div>
+            </div>
           </Button>
           <Button 
             variant="outline"
-            className="py-6 text-lg rounded-2xl"
+            className="py-6 text-lg rounded-2xl bg-black/5 hover:bg-black/10"
             onClick={() => navigate('/loading')}
           >
-            Somewhat confident
+            <div className="text-left">
+              <div className="font-medium">I'm somewhat confident.</div>
+              <div className="text-sm opacity-80">I have a general idea, but need more guidance.</div>
+            </div>
           </Button>
           <Button 
             variant="outline"
-            className="py-6 text-lg rounded-2xl"
+            className="py-6 text-lg rounded-2xl bg-black/5 hover:bg-black/10"
             onClick={() => navigate('/loading')}
           >
-            Not sure yet
+            <div className="text-left">
+              <div className="font-medium">I'm unsure...</div>
+              <div className="text-sm opacity-80">I'm interested, but unsure what steps to take.</div>
+            </div>
           </Button>
           <Button 
             variant="outline"
-            className="py-6 text-lg rounded-2xl"
+            className="py-6 text-lg rounded-2xl bg-black/5 hover:bg-black/10"
             onClick={() => navigate('/loading')}
           >
-            Need guidance
+            <div className="text-left">
+              <div className="font-medium">I'm not confident at all.</div>
+              <div className="text-sm opacity-80">I don't know how to start preparing.</div>
+            </div>
           </Button>
         </div>
       </div>
 
       <Button 
         onClick={() => navigate('/loading')}
-        className="w-full bg-black/10 text-black rounded-full py-4 text-[17px] font-medium"
+        className="w-full bg-black text-white rounded-full py-4 text-[17px] font-medium"
       >
-        Skip this question
+        Continue
       </Button>
     </motion.div>
   );
