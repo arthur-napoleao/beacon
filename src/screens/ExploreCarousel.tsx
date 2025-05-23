@@ -23,14 +23,14 @@ export function ExploreCarousel() {
       <div className="flex flex-col gap-4 w-full">
         <Button 
           onClick={() => navigate('/home')}
-          className="w-full py-4"
+          className="w-full bg-black text-white rounded-full py-4 text-[17px] font-medium"
         >
-          Explore Opportunities
+          Discover Opportunities
         </Button>
         <Button 
           variant="outline"
           onClick={() => navigate('/profile')}
-          className="w-full py-4"
+          className="w-full rounded-full py-4 text-[17px] font-medium"
         >
           View Profile
         </Button>
