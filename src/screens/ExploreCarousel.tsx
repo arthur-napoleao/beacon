@@ -125,7 +125,7 @@ export function ExploreCarousel() {
               <SwiperSlide key={index}>
                 <CareerCard 
                   {...career}
-                  onClick={() => navigate('/profile')}
+                  onClick={() => navigate(career.title === "Public Defender" ? '/defender' : '/profile')}
                 />
               </SwiperSlide>
             ))}
