@@ -37,6 +37,7 @@ export function FutureChat() {
   ]);
   const [inputValue, setInputValue] = useState("What's a typical day like?");
   const chatEndRef = useRef<HTMLDivElement>(null);
+  const swiperRef = useRef<any>(null);
 
   const quickPrompts = [
     "Can you share a memorable case?",
@@ -122,24 +123,34 @@ export function FutureChat() {
 
       <div className="absolute bottom-0 left-0 right-0 bg-white border-t p-4">
         <div className="max-w-screen-sm mx-auto">
-          <div className="mb-4 overflow-visible">
-            <Swiper
-              modules={[FreeMode]}
-              slidesPerView="auto"
-              spaceBetween={8}
-              freeMode={true}
-              className="!overflow-visible"
-              wrapperClass="!flex gap-2"
-            >
-              {quickPrompts.map((prompt, index) => (
-                <SwiperSlide key={index} className="!w-auto !mr-0">
-                  <QuickPrompt
-                    text={prompt}
-                    onClick={handlePromptClick}
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
+          <div className="mb-4">
+            <div className="relative w-full overflow-hidden">
+              <Swiper
+                modules={[FreeMode]}
+                slidesPerView="auto"
+                spaceBetween={8}
+                freeMode={{
+                  enabled: true,
+                  momentum: true,
+                  momentumRatio: 0.25,
+                  momentumVelocityRatio: 0.5
+                }}
+                onSwiper={(swiper) => {
+                  swiperRef.current = swiper;
+                }}
+                className="!w-full !overflow-visible"
+                wrapperClass="!flex !flex-nowrap"
+              >
+                {quickPrompts.map((prompt, index) => (
+                  <SwiperSlide key={index} className="!w-auto !flex-shrink-0">
+                    <QuickPrompt
+                      text={prompt}
+                      onClick={handlePromptClick}
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
           </div>
 
           <div className="flex gap-2">
