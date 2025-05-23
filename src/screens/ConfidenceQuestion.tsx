@@ -24,7 +24,7 @@ export function ConfidenceQuestion() {
           <Button 
             variant="outline"
             className="w-full py-6 text-lg rounded-2xl bg-black text-white hover:bg-black/90"
-            onClick={() => navigate('/loading')}
+            onClick={() => navigate('/college')}
           >
             <div className="w-full text-left">
               <div className="font-medium">I'm very confident.</div>
@@ -34,7 +34,7 @@ export function ConfidenceQuestion() {
           <Button 
             variant="outline"
             className="w-full py-6 text-lg rounded-2xl bg-black/5 hover:bg-black/10"
-            onClick={() => navigate('/loading')}
+            onClick={() => navigate('/college')}
           >
             <div className="w-full text-left">
               <div className="font-medium">I'm somewhat confident.</div>
@@ -44,7 +44,7 @@ export function ConfidenceQuestion() {
           <Button 
             variant="outline"
             className="w-full py-6 text-lg rounded-2xl bg-black/5 hover:bg-black/10"
-            onClick={() => navigate('/loading')}
+            onClick={() => navigate('/college')}
           >
             <div className="w-full text-left">
               <div className="font-medium">I'm unsure...</div>
@@ -54,7 +54,7 @@ export function ConfidenceQuestion() {
           <Button 
             variant="outline"
             className="w-full py-6 text-lg rounded-2xl bg-black/5 hover:bg-black/10"
-            onClick={() => navigate('/loading')}
+            onClick={() => navigate('/college')}
           >
             <div className="w-full text-left">
               <div className="font-medium">I'm not confident at all.</div>
@@ -65,7 +65,7 @@ export function ConfidenceQuestion() {
       </div>
 
       <Button 
-        onClick={() => navigate('/loading')}
+        onClick={() => navigate('/college')}
         className="w-full bg-black text-white rounded-full py-4 text-[17px] font-medium"
       >
         Continue

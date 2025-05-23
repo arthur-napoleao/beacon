@@ -8,6 +8,8 @@ import { NameInput } from './screens/NameInput';
 import { SchoolInput } from './screens/SchoolInput';
 import { InterestQuestion } from './screens/InterestQuestion';
 import { ConfidenceQuestion } from './screens/ConfidenceQuestion';
+import { CollegeIntentions } from './screens/CollegeIntentions';
+import { JoyfulTask } from './screens/JoyfulTask';
 import { LoadingAnalysis } from './screens/LoadingAnalysis';
 import { ExploreCarousel } from './screens/ExploreCarousel';
 import { ProfileDrawer } from './screens/ProfileDrawer';
@@ -28,6 +30,8 @@ function AnimatedRoutes() {
         <Route path="/school" element={<SchoolInput />} />
         <Route path="/interests" element={<InterestQuestion />} />
         <Route path="/confidence" element={<ConfidenceQuestion />} />
+        <Route path="/college" element={<CollegeIntentions />} />
+        <Route path="/joyful-task" element={<JoyfulTask />} />
         <Route path="/loading" element={<LoadingAnalysis />} />
         <Route path="/explore" element={<ExploreCarousel />} />
         <Route path="/profile" element={<ProfileDrawer />} />
