@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Navigation } from '@/components/ui/navigation';
 import { motion } from 'framer-motion';
 import { Send } from 'lucide-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 interface ChatMessage {
   type: 'system' | 'user';
@@ -19,7 +21,7 @@ function QuickPrompt({ text, onClick }: QuickPromptProps) {
   return (
     <button
       onClick={() => onClick(text)}
-      className="px-4 py-2 bg-black/5 rounded-full text-sm hover:bg-black/10 transition-colors"
+      className="px-4 py-2 bg-black/5 rounded-full text-sm hover:bg-black/10 transition-colors whitespace-nowrap"
     >
       {text}
     </button>
@@ -113,14 +115,21 @@ export function FutureChat() {
 
       <div className="absolute bottom-0 left-0 right-0 bg-white border-t p-4">
         <div className="max-w-screen-sm mx-auto">
-          <div className="mb-4 flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
-            {quickPrompts.map((prompt, index) => (
-              <QuickPrompt
-                key={index}
-                text={prompt}
-                onClick={handlePromptClick}
-              />
-            ))}
+          <div className="mb-4">
+            <Swiper
+              slidesPerView="auto"
+              spaceBetween={8}
+              className="w-full"
+            >
+              {quickPrompts.map((prompt, index) => (
+                <SwiperSlide key={index} style={{ width: 'auto' }}>
+                  <QuickPrompt
+                    text={prompt}
+                    onClick={handlePromptClick}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
 
           <div className="flex gap-2">

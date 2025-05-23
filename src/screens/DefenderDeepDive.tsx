@@ -79,7 +79,7 @@ export function DefenderDeepDive() {
 
   return (
     <motion.div 
-      className="flex flex-col h-full bg-white relative overflow-auto"
+      className="flex flex-col h-full bg-white relative overflow-y-auto"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -172,7 +172,7 @@ export function DefenderDeepDive() {
           <blockquote className="text-lg italic mb-2">
             "I walk into court knowing someone's freedom depends on my voice. It's intense, but when a verdict comes back 'not guilty' and I see relief on a family's face—nothing compares."
           </blockquote>
-          <div className="text-black/60">Jordan 2033 • Your Future Self</div>
+          <div className="text-black/60">Ana 2033 • Your Future Self</div>
         </div>
       </div>
 
