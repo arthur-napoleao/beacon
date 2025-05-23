@@ -27,8 +27,8 @@ interface TimelineItemProps {
 function TimelineItem({ time, title, sub }: TimelineItemProps) {
   return (
     <div className="flex gap-4 items-start">
-      <div className="text-sm font-medium text-black/60 w-16">{time}</div>
-      <div>
+      <div className="text-sm font-medium text-black/60 min-w-[60px]">{time}</div>
+      <div className="flex-1">
         <div className="font-medium">{title}</div>
         <div className="text-sm text-black/60">{sub}</div>
       </div>
@@ -79,28 +79,29 @@ export function DefenderDeepDive() {
 
   return (
     <motion.div 
-      className="flex flex-col min-h-full bg-white"
+      className="flex flex-col h-full bg-white relative overflow-auto"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <Navigation />
+      <Navigation className="absolute top-0 left-0 right-0 z-10" />
 
       {/* Hero Banner */}
-      <div className="relative h-64">
+      <div className="relative h-64 flex-shrink-0">
         <img 
           src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg"
           alt="Courtroom"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-6">
+          <div className="text-sm text-white/80 mb-1">Explore •</div>
           <h1 className="text-3xl font-bold text-white">Public Defender</h1>
           <p className="text-white/90">Stand up for justice when it matters most.</p>
         </div>
       </div>
 
       {/* Content */}
-      <div className="flex flex-col gap-8 p-6">
+      <div className="flex flex-col gap-8 px-4 py-6 pb-24">
         {/* Stats */}
         <div className="flex justify-between gap-4 bg-black/5 rounded-2xl p-6">
           <StatBlock label="Median salary" value="$64k/yr" />
@@ -136,7 +137,7 @@ export function DefenderDeepDive() {
         {/* Challenges */}
         <div>
           <h2 className="text-xl font-semibold mb-4">Biggest challenges</h2>
-          <ul className="list-disc list-inside space-y-2 text-black/80">
+          <ul className="list-disc pl-4 space-y-2 text-black/80">
             {challenges.map((challenge, index) => (
               <li key={index}>{challenge}</li>
             ))}
@@ -159,7 +160,7 @@ export function DefenderDeepDive() {
           <div className="space-y-4">
             {journey.map((step, index) => (
               <div key={index} className="flex gap-4">
-                <div className="font-bold w-20">{step.year}</div>
+                <div className="font-bold min-w-[60px]">{step.year}</div>
                 <div className="flex-1">{step.text}</div>
               </div>
             ))}
@@ -173,8 +174,10 @@ export function DefenderDeepDive() {
           </blockquote>
           <div className="text-black/60">Jordan 2033 • Your Future Self</div>
         </div>
+      </div>
 
-        {/* CTA */}
+      {/* Fixed CTA at bottom */}
+      <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t">
         <Button 
           onClick={() => navigate('/action-canvas')}
           className="w-full bg-black text-white rounded-full py-4 text-[17px] font-medium"
