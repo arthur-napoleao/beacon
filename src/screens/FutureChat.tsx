@@ -42,7 +42,13 @@ export function FutureChat() {
     "Can you share a memorable case?",
     "How do you prepare for court?",
     "What's one thing you'd change about your path?",
-    "Where do you see yourself in 5 years?"
+    "Where do you see yourself in 5 years?",
+    "How did you become a defender?",
+    "What was the hardest part of that journey?",
+    "What skills did you have to build from scratch?",
+    "Do you still find it challenging today?",
+    "What do you love most about this career?",
+    "Any advice for keeping balance and avoiding burnout?"
   ];
 
   const predefinedResponses: { [key: string]: string } = {
@@ -116,16 +122,17 @@ export function FutureChat() {
 
       <div className="absolute bottom-0 left-0 right-0 bg-white border-t p-4">
         <div className="max-w-screen-sm mx-auto">
-          <div className="mb-4 overflow-hidden">
+          <div className="mb-4 overflow-visible">
             <Swiper
               modules={[FreeMode]}
               slidesPerView="auto"
               spaceBetween={8}
               freeMode={true}
-              className="w-full"
+              className="!overflow-visible"
+              wrapperClass="!flex gap-2"
             >
               {quickPrompts.map((prompt, index) => (
-                <SwiperSlide key={index} className="w-auto">
+                <SwiperSlide key={index} className="!w-auto !mr-0">
                   <QuickPrompt
                     text={prompt}
                     onClick={handlePromptClick}
