@@ -2,8 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { SplashScreen } from './screens/SplashScreen';
-import { HeroSlide1 } from './screens/HeroSlide1';
-import { HeroSlide2 } from './screens/HeroSlide2';
 import { ScreenThree as EmailInput } from './screens/ScreenThree/ScreenThree';
 import { NameInput } from './screens/NameInput';
 import { SchoolInput } from './screens/SchoolInput';
@@ -23,8 +21,6 @@ function App() {
         <AnimatePresence mode="wait">
           <Routes>
             <Route path="/" element={<SplashScreen />} />
-            <Route path="/hero-1" element={<HeroSlide1 />} />
-            <Route path="/hero-2" element={<HeroSlide2 />} />
             <Route path="/email" element={<EmailInput />} />
             <Route path="/name" element={<NameInput />} />
             <Route path="/school" element={<SchoolInput />} />
@@ -42,5 +38,3 @@ function App() {
     </Router>
   );
 }
-
-export default App;
