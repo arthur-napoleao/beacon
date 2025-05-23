@@ -37,7 +37,7 @@ export function HeroSlide2() {
           onClick={() => navigate('/email')}
           className="w-full bg-black text-white rounded-full py-4 text-lg font-medium hover:bg-gray-800 transition-colors"
         >
-          Get started
+          Start exploring now
         </button>
       </motion.div>
     </motion.div>

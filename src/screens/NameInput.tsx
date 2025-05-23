@@ -30,7 +30,7 @@ export function NameInput() {
         onClick={() => navigate('/school')}
         className="w-full bg-black text-white rounded-full py-4 text-[17px] font-medium"
       >
-        Continue
+        Tell us more
       </Button>
     </motion.div>
   );

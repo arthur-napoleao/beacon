@@ -48,7 +48,7 @@ export const EmailInputSection = (): JSX.Element => {
         onClick={() => navigate('/verify')}
         className="w-full max-w-[480px] min-w-[180px] py-3.5 px-6 bg-[#141414] rounded-[27px] shadow-shallow-below [font-family:'PP_Neue_Montreal-Medium',Helvetica] font-medium text-white text-lg tracking-[0.18px] leading-5"
       >
-        Continue
+        Send verification code
       </Button>
     </div>
   );

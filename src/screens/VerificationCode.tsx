@@ -35,7 +35,7 @@ export function VerificationCode() {
         onClick={() => navigate('/name')}
         className="w-full bg-black text-white rounded-full py-4 text-[17px] font-medium"
       >
-        Continue
+        Set up your profile
       </Button>
     </motion.div>
   );
