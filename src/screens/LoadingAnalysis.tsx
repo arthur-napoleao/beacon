@@ -15,17 +15,19 @@ export function LoadingAnalysis() {
 
   return (
     <motion.div 
-      className="flex flex-col items-center justify-center h-full p-6"
+      className="flex flex-col items-center justify-center h-full p-6 bg-gradient-to-b from-white to-gray-50"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div className="flex flex-col items-center gap-8">
-        <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin" />
-        <h1 className="text-2xl font-bold text-center">Analyzing your profile...</h1>
-        <p className="text-center text-secondary">
-          We're creating personalized recommendations for you, Ana
-        </p>
+      <div className="flex flex-col items-center gap-8 text-center">
+        <div className="w-16 h-16 border-4 border-black border-t-transparent rounded-full animate-spin" />
+        <div className="space-y-4">
+          <h1 className="text-[32px] font-['PP_Editorial_New']">Hold up... we're time traveling.</h1>
+          <p className="text-[17px] text-black/60">
+            Building future versions of you based on what you care about. This might take a sec.
+          </p>
+        </div>
       </div>
     </motion.div>
   );
